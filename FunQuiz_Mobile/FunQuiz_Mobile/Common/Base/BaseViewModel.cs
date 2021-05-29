@@ -1,16 +1,19 @@
-﻿using FunQuiz_Mobile.Models;
-using FunQuiz_Mobile.Services;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using Xamarin.Forms;
+using System.Threading.Tasks;
 
-namespace FunQuiz_Mobile.ViewModels
+namespace FunQuiz_Mobile.Common.Base
 {
-    public class BaseViewModel : INotifyPropertyChanged
+    public abstract class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+        //public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+
+        public virtual Task InitializeAsync(object parameter)
+        {
+            return Task.CompletedTask;
+        }
 
         bool isBusy = false;
         public bool IsBusy

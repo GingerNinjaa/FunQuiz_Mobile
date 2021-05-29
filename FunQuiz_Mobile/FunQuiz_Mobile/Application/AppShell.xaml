@@ -2,6 +2,7 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:FunQuiz_Mobile.Views"
+       xmlns:list="clr-namespace:FunQuiz_Mobile.Modules.ListOfQuiz;assembly=FunQuiz_Mobile"
        Title="FunQuiz_Mobile"
        x:Class="FunQuiz_Mobile.AppShell">
 
@@ -81,9 +82,11 @@
     <FlyoutItem Title="About" Icon="icon_about.png">
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Browse" Icon="icon_feed.png">
-        <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />
+
+    <FlyoutItem Title="Quizy" Icon="icon_feed.png">
+        <ShellContent Route="ListOfQuizPage" ContentTemplate="{DataTemplate list:ListOfQuizPage}" />
     </FlyoutItem>
+
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
     <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
