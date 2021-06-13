@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FunQuiz_Mobile.Modules.ReadyToStart.ReadyToStart">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Label Text="{Binding Question}"
+                   FontFamily="Lobster"
+                   HorizontalTextAlignment="Center"
+                   FontSize="20" 
+                   Padding="0,0,0,0"/>
+
+            <Image VerticalOptions="FillAndExpand"
+                   HeightRequest="200"
+                   Aspect="Fill"
+                   Source="{Binding imageUrl}"/>
+
+
+
+
+            <Button Margin="0,10,0,0" Text="{Binding Answer1}"
+                    Command="{Binding ButtonTapped}"
+                    CommandParameter ="{Binding Answer1}" 
+                    BackgroundColor="{StaticResource Primary}"
+                    TextColor="White" />
+            <Button Margin="0,10,0,0" Text="{Binding Answer2}"
+                    Command="{Binding ButtonTapped}"
+                    CommandParameter ="{Binding Answer2}" 
+                    BackgroundColor="{StaticResource Primary}"
+                    TextColor="White" />
+            <Button Margin="0,10,0,0" Text="{Binding Answer3}"
+                    Command="{Binding ButtonTapped}"
+                    CommandParameter ="{Binding Answer3}" 
+                    BackgroundColor="{StaticResource Primary}"
+                    TextColor="White" />
+            <Button Margin="0,10,0,0" Text="{Binding Answer4}"
+                    Command="{Binding ButtonTapped}"
+                    CommandParameter ="{Binding Answer4}" 
+                    BackgroundColor="{StaticResource Primary}"
+                    TextColor="White" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

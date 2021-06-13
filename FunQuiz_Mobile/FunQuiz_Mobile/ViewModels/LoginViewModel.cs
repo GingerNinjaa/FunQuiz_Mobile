@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using FunQuiz_Mobile.Common.Base;
 using Xamarin.Forms;
 
 namespace FunQuiz_Mobile.ViewModels

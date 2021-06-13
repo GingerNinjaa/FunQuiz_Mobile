@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Input;
+using FunQuiz_Mobile.Common.Base;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 

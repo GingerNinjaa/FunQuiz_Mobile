@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
+using FunQuiz_Mobile.Common.Base;
 using Xamarin.Forms;
 
 namespace FunQuiz_Mobile.ViewModels
@@ -55,8 +56,6 @@ namespace FunQuiz_Mobile.ViewModels
                 Text = Text,
                 Description = Description
             };
-
-            await DataStore.AddItemAsync(newItem);
 
             // This will pop the current page off the navigation stack
             await Shell.Current.GoToAsync("..");
